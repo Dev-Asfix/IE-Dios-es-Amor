@@ -1,0 +1,70 @@
+/* Contenedor relativo para las imágenes */
+.box-images {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* Ajusta según tu diseño */
+    margin: auto;
+    height: 500px; /* Define un alto fijo para contener las imágenes */
+    overflow: hidden;
+  }
+  
+  /* Primera imagen */
+  .box-images-item {
+    position: absolute;
+    top: 110px;
+    left: 0px;
+    width: 100%;
+    z-index: 1;
+    animation: moveImage1 5s infinite alternate ease-in-out;
+  }
+  
+  /* Segunda imagen superpuesta */
+  .box-images-item.box-images-overlap {
+    top: 0;
+    left: 130px;
+    z-index: 2;
+    animation: moveImage2 5s infinite alternate ease-in-out;
+  }
+  
+  /* Animaciones */
+  @keyframes moveImage1 {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(-10px, 10px) scale(1.05);
+    }
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+  }
+  
+  @keyframes moveImage2 {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(10px, -10px) scale(1.05);
+    }
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+  }
+  
+  .block-xs {
+    text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+  }
+  .row {
+    text-align: left;;
+  }
+  
+  h2, p, h5, ul {
+    margin: 0 0 15px; /* Espaciado coherente entre elementos */
+  }
+  
+  ul.list-xs {
+    padding-left: 20px; /* Añade espacio para las viñetas */
+    list-style-position: inside; /* Coloca las viñetas dentro del contenedor */
+  }
+  
+  
